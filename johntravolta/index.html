@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Program Hitung Gaji</title>
+  </head>
+  <body>
+    <div class="container">
+        <br>
+        <div class="box">
+                    <h1 id="phg" class="text-center">PHG</h1>
+                    <h3 class="text-center">Program Hitung Gaji</h3>
+                    <h5 class="text-center">Silahkan pilih menu dibawah ini. Anda bisa menghitung gaji John Travolta maupun gaji anda!</h5>
+                    <div class="text-center" style="margin-top: 25px;">
+                            <row>
+                                <col>
+                                    <button id="gjt" class="btn btn-primary">Gaji John Travolta</button>
+                                </col>
+                                <col>
+                                    <button id="gl" class="btn btn-secondary">Hitung Gaji Custom</button>
+                                </col>
+                            </row>
+                    </div>
+<br>
+                <div class="hitungGaji">
+                    <div id="hgjt">
+                        <div class="alert alert-success" role="alert">
+                            <p>
+                                Gaji John Travolta (40 Jam per minggu) : Rp. 15000 per jam. <br>
+                                Gaji Lembur (>40 Jam per minggu) : Rp. 22500 per jam. <br>
+                                Rumus : <br>
+                                1. Jam kerja lembur - Jam kerja normal <br>
+                                2. (Gaji normal x Jam kerja normal) + (Gaji lembur x jam kerja lembur) <br>
+                            </p>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="jamNormal">Jam kerja normal</label>
+                                    <input disabled data-toggle="tooltip" data-placement="top" title="Data tidak dapat diubah!" id="jamNormal" type="text" name="jamNormal" class="form-control" value="40">
+                                </div>
+                                <div class="col">
+                                    <label for="jamLembur">Jam kerja lembur</label>
+                                    <input disabled data-toggle="tooltip" data-placement="top" title="Data tidak dapat diubah!"  id="jamLembur" type="text" name="jamLembur" class="form-control" value="52">
+                                </div>
+                                <div class="col">
+                                    <label for="gajiNormal">Gaji kerja normal</label>
+                                    <input disabled data-toggle="tooltip" data-placement="top" title="Data tidak dapat diubah!"  id="gajiNormal" type="text" name="gajiNormal" class="form-control" value="15000">
+                                </div>
+                                <div class="col">
+                                    <label for="gajiLembur">Gaji kerja lembur</label>
+                                    <input disabled data-toggle="tooltip" data-placement="top" title="Data tidak dapat diubah!"  id="gajiLembur" type="text" name="gajiLembur" class="form-control" value="22500">
+                                </div>
+                                <div class="col">
+                                    <label for="pengeluaran">Pengeluaran</label>
+                                    <input disabled data-toggle="tooltip" data-placement="top" title="Data tidak dapat diubah!"  id="pengeluaran" type="text" name="pengeluaran" class="form-control" value="600000">
+                                </div>
+                            </div>
+                            <br>
+                            <button onclick="gajiJohn()" class="btn btn-warning">Hitung Gaji</button>
+                            <div class="batas"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <p id="hasilGajiJohn"></p>
+                                </div>
+                                <div class="col">
+                                    <h3 id="jmlGajiJohn"></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="hgl">
+                        <div class="alert alert-success" role="alert">
+                            <p>
+                                Rumus : <br>
+                                1. Jam kerja lembur - Jam kerja normal <br>
+                                2. (Gaji normal x Jam kerja normal) + (Gaji lembur x jam kerja lembur) <br>
+                            </p>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="jamNormal">Jam kerja normal</label>
+                                    <input id="jamNormalCustom" type="text" name="jamNormal" class="form-control" placeholder="Masukkan jam kerja normal">
+                                </div>
+                                <div class="col">
+                                    <label for="jamLembur">Jam kerja lembur</label>
+                                    <input id="jamLemburCustom" type="text" name="jamLembur" class="form-control" placeholder="Masukkan jam kerja lembur">
+                                </div>
+                                <div class="col">
+                                    <label for="gajiNormal">Gaji kerja normal</label>
+                                    <input id="gajiNormalCustom" type="text" name="gajiNormal" class="form-control" placeholder="Masukkan gaji normal per jam">
+                                </div>
+                                <div class="col">
+                                    <label for="gajiLembur">Gaji kerja lembur</label>
+                                    <input id="gajiLemburCustom" type="text" name="gajiLembur" class="form-control" placeholder="Masukkan gaji lembur per jam">
+                                </div>
+                                <div class="col">
+                                    <label for="pengeluaranCustom">Pengeluaran</label>
+                                    <input id="pengeluaranCustom" type="text" name="pengeluaranCustom" class="form-control" placeholder="Masukkan pengeluaran">
+                                </div>
+                            </div>
+                            <br>
+                            <button onclick="hitungGajiCustom()" class="btn btn-warning">Hitung Gaji</button>
+                            <div class="batas"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <p id="hasilGajiCustom"></p>
+                                </div>
+                                <div class="col">
+                                    <h3 id="jmlGajiCustom"></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p class="text-center"> Made with ❤ <br> &copy; 2021 | Awiez Fathwa Zein</p>
+            </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

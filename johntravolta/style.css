@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+button{
+    min-width: 200px !important;
+}
+
+#hgjt{
+    visibility: hidden;
+    position: absolute;
+}
+
+#hgl{
+    visibility: hidden;
+    position: absolute;
+}
+
+.batas{
+    margin-top: 50px;
+}
+
+#jmlGajiJohn{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ket{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.box{
+    border: dashed 1px;
+    padding: 20px;
+}
+
+#phg{
+    font-family: 'Audiowide', cursive;
+    font-size: 65px;
+}
