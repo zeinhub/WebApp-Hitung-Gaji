@@ -29,10 +29,18 @@ function gajiJohn() {
     let totalGajiNormal = gajiNormal * jamNormal;
     let totalGajiLembur = gajiLembur * totalLembur;
     let totalGaji = totalGajiNormal + totalGajiLembur;
+    let jmlTabungan = totalGaji - pengeluaran;
+    let terbilang;
     let ket;
 
+    if (jmlTabungan > 0) {
+        terbilang = jmlTabungan;
+    }else{
+        "";
+    }
+
     if (totalGaji > pengeluaran) {
-        ket = "Bisa menabung"
+        ket = "Bisa menabung sebesar : Rp. "
     }else if(totalGaji==pengeluaran){
         ket = "Tidak bisa menabung!"
     }else{
@@ -40,7 +48,7 @@ function gajiJohn() {
     }
 
     document.getElementById("hasilGajiJohn").innerHTML = "Lama lembur = " + totalLembur + " Jam" + "<br>" + "Gaji normal = " + "Rp. " + gajiNormal + " Per Jam" + "<br>" +  "Gaji Lembur = " + "Rp. " + gajiLembur + " Per Jam" + "<br>" + "Pengeluaran : Rp. " + pengeluaran;
-    document.getElementById("jmlGajiJohn").innerHTML = "Gaji John Travolta = " + totalGaji + " / Minggu" + "<br>" + "<div id=\"ket\" class=\"btn btn-success btn-block disabled\">"+ket+"</div>";
+    document.getElementById("jmlGajiJohn").innerHTML = "Gaji John Travolta = " + totalGaji + " / Minggu" + "<br>" + "<div id=\"ket\" class=\"btn btn-success btn-block disabled\">"+ket+ terbilang + "</div>";
 }
 
 function hitungGajiCustom() {
@@ -53,11 +61,19 @@ function hitungGajiCustom() {
     let totalGajiNormalCustom = gajiNormalCustom * jamNormalCustom;
     let totalGajiLemburCustom = gajiLemburCustom * totalLemburCustom;
     let totalGajiCustom = totalGajiNormalCustom + totalGajiLemburCustom;
-
+    let jmlTabunganCustom = totalGajiCustom - pengeluaranCustom;
+    let terbilangCustom;
     let ketCustom;
 
+    
+    if (jmlTabunganCustom > 0) {
+        terbilangCustom = jmlTabunganCustom;
+    }else{
+        terbilangCustom = "";
+    }
+
     if (totalGajiCustom > pengeluaranCustom) {
-        ketCustom = "Bisa menabung"
+        ketCustom = "Bisa menabung sebesar : Rp. "
     }else if(totalGajiCustom==pengeluaranCustom){
         ketCustom = "Tidak bisa menabung!"
     }else{
@@ -65,5 +81,5 @@ function hitungGajiCustom() {
     }
 
     document.getElementById("hasilGajiCustom").innerHTML = "Lama lembur = " + totalLemburCustom + " Jam" + "<br>" + "Gaji normal = " + "Rp. " + gajiNormalCustom + " Per Jam" + "<br>" +  "Gaji Lembur = " + "Rp. " + gajiLemburCustom + " Per Jam" + "<br>" + "Pengeluaran : Rp. " + pengeluaranCustom;
-    document.getElementById("jmlGajiCustom").innerHTML = "Gaji Anda = " + totalGajiCustom + " / Minggu" + "<br>" + "<div id=\"ket\" class=\"btn btn-success btn-block disabled\">"+ketCustom+"</div>";
+    document.getElementById("jmlGajiCustom").innerHTML = "Gaji Anda = " + totalGajiCustom + " / Minggu" + "<br>" + "<div id=\"ket\" class=\"btn btn-success btn-block disabled\">"+ketCustom+ terbilangCustom + "</div>";
 }
