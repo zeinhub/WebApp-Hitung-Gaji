@@ -13,3 +13,5 @@ pengeluaran mr. john selama seminggu ini adalah rp. 600.000. Apakah Mr. john bis
 Pada aplikasi berbasis web ini saya buat menggunakan HTML, CSS, dan Vanilla Javascript. Pada saat pertama kali dibuka aplikasi akan menampilkan nama aplikasi dan 2 buah tombol yaitu "Gaji john travolta" yang digunakan untuk menghitung gaji John Travolta berdasarkan nilai yang telah diberikan pada soal. Lalu tombol "Hitung Gaji Custom" digunakan untuk menghitung gaji dengan variabel yang bisa kita isi.
 
 Aplikasi ini akan otomatis menampilkan keterangan apakah "Bisa menabung", "Tidak bisa menabung", atau "cari tambahan!". Jumlah yang dapat ditabung juga akan ditampilkan pada layar.
+
+Demo aplikasi : https://dev.awsh.xyz/hitung-gaji
